@@ -75,7 +75,7 @@
 			<div class="container">
 				<label for="ch6"><img src="image/table1.jpeg" alt="chair"></label>
 				<input type="checkbox" id="ch6">
-				<p> $1.00 -Chair</p>
+				<p> $5433.00 -Chair</p>
 			</div>
 	
 	
@@ -205,7 +205,7 @@
 			</div>
 		
 		<button onclick="displayMe()">
-			Make Payment 
+			<span id="play">Make Payment</span>
 
 		</button>
 
@@ -215,9 +215,22 @@
 
 
 <script>
+	let button=document.querySelector('button');
+	let payment=document.getElementById('pop');
+	let span =document.getElementById('play');
+	
 	function displayMe(){
-	document.getElementById("pop").style.display="block";
+	if(payment.style.display=="block"){
+
+	payment.style.display="none";
+	span.innerHTML="Make Payment";
+
+	}else{
+	payment.style.display="block";
+	span.innerHTML="Close Notification";
 	}
+	
+}
 
 </script>
 
